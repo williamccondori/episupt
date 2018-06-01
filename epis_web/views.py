@@ -3,6 +3,8 @@ from django.shortcuts import render
 # Se agrega modulos necesarios.
 from django.http import HttpResponse
 
+from epis_web.services.plan_estudio_service import PlanestudioService
+
 # Create your views here.
 
 APP_NAME='epis_web/'
@@ -25,6 +27,9 @@ def investigacion(request):
     return render(request, APP_NAME+'investigacion/investigacion.html')
 
 def plan_estudio(request):
+    plan_estudio_service = PlanestudioService()
+    data = plan_estudio_service.obtener_ultimo()
+    print(data)
     return render(request, APP_NAME+'investigacion/plan_estudio.html')
 
 def plan_estudio_historico(request):

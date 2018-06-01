@@ -1,0 +1,76 @@
+{% extends 'epis_web/base.html'%}
+
+{% load static %}
+
+{% block title %} 
+Misión y visión
+{% endblock %}
+
+{% block content %}
+<section>
+    <section>
+        <div class="container">     
+            <ol class="breadcrumb">
+                <li>
+                    <a href="#"><i class="fa fa-home app-spr"></i>Inicio</a>
+                </li>
+                <li class="active">Plan de estudios</li>
+            </ol>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-default">
+                      <div class="panel-heading">
+                            <span>Primer ciclo</span>
+                      </div>
+                      <div class="table-responsive">
+                        <table class="table table-condensed table-hover table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Curso</th>
+                                    <th>H.T.</th>
+                                    <th>H.P.</th>
+                                    <th>T.H.</th>
+                                    <th>Créditos</th>
+                                    <th>Pre-requisitos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="label label-success">Data</span></td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="label label-success">Data</span></td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                    <td>Data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                <div class="well">
+                    <h3>Abreviaturas</h3>
+                    <p><b class="app-spr">H.T.</b><span>Horas teóricas</span></p>
+                    <p><b class="app-spr">H.P.</b><span>Horas prácticas</span></p>
+                    <p><b class="app-spr">T.H.</b><span>Total de horas</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

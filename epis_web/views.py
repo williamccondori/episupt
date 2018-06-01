@@ -21,3 +21,6 @@ def noticias(request):
 
 def plan_estudio(request):
     return render(request, APP_NAME+'plan_estudio.html')
+
+def plan_estudio_historico(request):
+    return render(request, APP_NAME+'plan_estudio_historico.html')

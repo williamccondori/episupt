@@ -7,8 +7,60 @@
   margin-right: 5px;
 }
 
+.panel-heading {
+  font-weight: bold;
+}
+
 body {
   font-family: 'Ubuntu', sans-serif;
+}
+
+body h3 {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff9800;
+  border-bottom: 2px solid #ff9800;
+}
+
+body #app-breadcrumb {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  background-color: #0D47A1;
+}
+
+body #app-breadcrumb h1 {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+body #app-breadcrumb .breadcrumb {
+  padding-left: 0;
+  background-color: #0D47A1;
+}
+
+body #app-breadcrumb .breadcrumb li {
+  color: #ffffff !important;
+}
+
+body #app-breadcrumb .breadcrumb li a {
+  color: #ffffff !important;
+}
+
+body #app-breadcrumb .breadcrumb li:first-child a {
+  padding: 5px;
+  background-color: #ffffff;
+  color: #ff9800 !important;
+  border-radius: 5px;
 }
 
 body #app-footer {

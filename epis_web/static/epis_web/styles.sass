@@ -1,13 +1,58 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700')
 
+$color-yellow: #ff9800
+$color-blue: #0D47A1
+$color-white: #ffffff
 
 .app-spl
     margin-left: 5px
 .app-spr
     margin-right: 5px
 
+.panel-heading
+    font-weight: bold
+
 body
+
+    h3
+        display: inline-block
+        margin: 0
+        padding: 0
+        margin-bottom: 10px
+        font-size: 1em
+        font-weight: bold
+        text-transform: uppercase
+        color: $color-yellow
+        border-bottom: 2px solid $color-yellow
+        
+
     font-family: 'Ubuntu', sans-serif
+
+    #app-breadcrumb
+        padding-top: 40px
+        padding-bottom: 20px
+        margin-bottom: 50px
+        background-color: $color-blue
+        h1
+            margin: 0
+            padding: 0
+            margin-bottom: 10px
+            font-size: 1.5em
+            font-weight: bold
+            color: $color-white
+        .breadcrumb
+            padding-left: 0
+            background-color: $color-blue
+            li
+                color: $color-white !important
+                a
+                    color: $color-white !important
+            li:first-child
+                a
+                    padding: 5px
+                    background-color: $color-white
+                    color: $color-yellow !important
+                    border-radius: 5px
 
     #app-footer
         background-color: #212121

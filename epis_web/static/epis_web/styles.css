@@ -4,7 +4,19 @@
 }
 
 .app-spr {
-  margin-right: 5px;
+  margin-riht: 5px;
+}
+
+.app-icon {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #579fdf;
+  color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
 }
 
 .panel-heading {
@@ -23,15 +35,15 @@ body h3 {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ff9800;
-  border-bottom: 2px solid #ff9800;
+  color: #579fdf;
+  border-bottom: 2px solid #579fdf;
 }
 
 body #app-breadcrumb {
   padding-top: 40px;
   padding-bottom: 20px;
   margin-bottom: 50px;
-  background-color: #0D47A1;
+  background-color: #23394D;
 }
 
 body #app-breadcrumb h1 {
@@ -45,7 +57,7 @@ body #app-breadcrumb h1 {
 
 body #app-breadcrumb .breadcrumb {
   padding-left: 0;
-  background-color: #0D47A1;
+  background-color: #23394D;
 }
 
 body #app-breadcrumb .breadcrumb li {
@@ -59,7 +71,7 @@ body #app-breadcrumb .breadcrumb li a {
 body #app-breadcrumb .breadcrumb li:first-child a {
   padding: 5px;
   background-color: #ffffff;
-  color: #ff9800 !important;
+  color: #579fdf !important;
   border-radius: 5px;
 }
 

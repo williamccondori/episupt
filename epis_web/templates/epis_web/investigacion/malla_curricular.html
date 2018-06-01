@@ -1,0 +1,28 @@
+{% extends 'epis_web/base.html'%} {% load static %} {% block title %} Malla curricular {% endblock %} {% block content %}
+<section>
+    <section id="app-breadcrumb">
+        <div class="container">
+            <h1>Malla curricular</h1>
+            <ol class="breadcrumb">
+                <li>
+                    <a href="{% url 'index' %}">
+                        <i class="fa fa-home app-spr"></i>Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url 'investigacion' %}">Investigación</a>
+                </li>
+                <li class="active">
+                    <span>Malla curricular</span>
+                </li>
+            </ol>
+        </div>
+    </section>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -19,8 +19,23 @@ def admision(request):
 def noticias(request):
     return render(request, APP_NAME+'noticias.html')
 
+# Investigacion.
+
+def investigacion(request):
+    return render(request, APP_NAME+'investigacion/investigacion.html')
+
 def plan_estudio(request):
-    return render(request, APP_NAME+'plan_estudio.html')
+    return render(request, APP_NAME+'investigacion/plan_estudio.html')
 
 def plan_estudio_historico(request):
-    return render(request, APP_NAME+'plan_estudio_historico.html')
+    return render(request, APP_NAME+'investigacion/plan_estudio_historico.html')
+
+def malla_curricular(request):
+    return render(request, APP_NAME+'investigacion/malla_curricular.html')
+
+def concurso_proyecto(request):
+    return render(request, APP_NAME+'investigacion/concurso_proyecto.html')
+
+def concurso_proyecto_historico(request):
+    return render(request, APP_NAME+'investigacion/concurso_proyecto_historico.html')
+    

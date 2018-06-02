@@ -21,51 +21,56 @@
 <section>
     <div class="container">
         <div class="row">
+
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>{{ plan_estudio.nombre }}</h1>
+                <p>{{ plan_estudio.resena }}</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                {% for ciclo in ciclos %}
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <span>Primer ciclo</span>
+                        <span>{{ ciclo.nombre }}</span>
                     </div>
                     <div class="table-responsive">
                         <table class="table table-condensed table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
+                                    <th class="col-xs-1">Código</th>
                                     <th>Curso</th>
                                     <th>H.T.</th>
                                     <th>H.P.</th>
                                     <th>T.H.</th>
                                     <th>Créditos</th>
-                                    <th>Pre-requisitos</th>
+                                    <th class="col-xs-2">Pre-requisitos</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for curso in cursos_obligatorios %} 
+                                {% if curso.ciclo.id == ciclo.id %}
                                 <tr>
                                     <td>
-                                        <span class="label label-success">Data</span>
+                                        <span class="label label-success">{{ curso.codigo }}</span>
                                     </td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                                <tr>
+                                    <td>{{ curso.nombre }}</td>
+                                    <td>{{ curso.hora_teorica }}</td>
+                                    <td>{{ curso.hora_practica }}</td>
+                                    <td>{{ curso.hora_total }}</td>
+                                    <td>{{ curso.credito }}</td>
                                     <td>
-                                        <span class="label label-success">Data</span>
+                                        {% for requisito in curso.requisitos %}
+                                            <span class="label label-info">{{ requisito.nombre }}</span><br>
+                                        {% endfor %}
                                     </td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
                                 </tr>
+                                {% endif %} 
+                                {% endfor %}
                             </tbody>
                         </table>
                     </div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         <div class="row">
@@ -78,39 +83,34 @@
                         <table class="table table-condensed table-hover table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Código</th>
+                                    <th class="col-xs-1">Código</th>
                                     <th>Curso</th>
                                     <th>H.T.</th>
                                     <th>H.P.</th>
                                     <th>T.H.</th>
                                     <th>Créditos</th>
-                                    <th>Pre-requisitos</th>
+                                    <th class="col-xs-2">Pre-requisitos</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>
-                                        <span class="label label-success">Data</span>
-                                    </td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="label label-success">Data</span>
-                                    </td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                    <td>Data</td>
-                                </tr>
-                            </tbody>
+                                    {% for curso in cursos_electivos %} 
+                                    <tr>
+                                        <td>
+                                            <span class="label label-success">{{ curso.codigo }}</span>
+                                        </td>
+                                        <td>{{ curso.nombre }}</td>
+                                        <td>{{ curso.hora_teorica }}</td>
+                                        <td>{{ curso.hora_practica }}</td>
+                                        <td>{{ curso.hora_total }}</td>
+                                        <td>{{ curso.credito }}</td>
+                                        <td>
+                                            {% for requisito in curso.requisitos %}
+                                                <span class="label label-info">{{ requisito.nombre }}</span><br>
+                                            {% endfor %}
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
                         </table>
                     </div>
                 </div>
@@ -133,26 +133,26 @@
                             <tbody>
                                 <tr>
                                     <td>Créditos obligatorios</td>
-                                    <td>211</td>
+                                    <td>{{ plan_estudio.credito_obligatorio }}</td>
                                 </tr>
                                 <tr>
                                     <td>Créditos electivos</td>
-                                    <td>9</td>
+                                    <td>{{ plan_estudio.credito_electivo }}</td>
                                 </tr>
                                 <tr>
                                     <td>Créditos (Prácticas pre-profesionales)</td>
-                                    <td>3</td>
+                                    <td>{{ plan_estudio.credito_practica }}</td>
                                 </tr>
                                 <tr>
                                     <td>Extracurriculares</td>
-                                    <td>2</td>
+                                    <td>{{ plan_estudio.credito_extracurricular }}</td>
                                 </tr>
                                 <tr>
                                     <td>
                                         <b>Total</b>
                                     </td>
                                     <td>
-                                        <b>225</b>
+                                        <b>{{  plan_estudio.credito_total }}</b>
                                     </td>
                                 </tr>
                             </tbody>

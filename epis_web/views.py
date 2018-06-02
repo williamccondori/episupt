@@ -28,9 +28,8 @@ def investigacion(request):
 
 def plan_estudio(request):
     plan_estudio_service = PlanestudioService()
-    data = plan_estudio_service.obtener_ultimo()
-    print(data)
-    return render(request, APP_NAME+'investigacion/plan_estudio.html')
+    respuesta = plan_estudio_service.obtener_ultimo()
+    return render(request, APP_NAME+'investigacion/plan_estudio.html', respuesta)
 
 def plan_estudio_historico(request):
     return render(request, APP_NAME+'investigacion/plan_estudio_historico.html')

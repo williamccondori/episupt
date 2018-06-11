@@ -8,7 +8,7 @@ urlpatterns = [
 
     path('admision', views.admision, name='admision'),
 
-
+    # Publicaciones.
     path('noticias', views.noticias, name='noticias'),
 
     # Investigacion.

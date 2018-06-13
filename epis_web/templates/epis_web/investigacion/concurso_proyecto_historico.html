@@ -1,22 +1,29 @@
-{% extends 'epis_web/base.html'%} {% load static %} {% block title %} Concurso de proyectos histórico {% endblock %} {% block content %}
-<section>
-    <section id="app-breadcrumb">
-        <div class="container">
-            <h1>Concurso de proyectos histórico</h1>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="{% url 'index' %}">
-                        <i class="fa fa-home app-spr"></i>Inicio</a>
-                </li>
-                <li>
-                    <a href="{% url 'investigacion' %}">Investigación</a>
-                </li>
-                <li class="active">
-                    <span>Concurso de proyectos histórico</span>
-                </li>
-            </ol>
+{% extends 'epis_web/base.html'%} 
+{% load static %} 
+{% block title %} Concurso de proyectos histórico {% endblock %} 
+{% block content %}
+<section id="epis-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Concurso de proyectos histórico</h1>
+                <div class="epis-list-ho">
+                    <ul>
+                        <li>
+                            <a href="{% url 'index' %}">
+                                <i class="fa fa-home"></i>Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'investigacion' %}">Investigación</a>
+                        </li>
+                        <li>
+                            <span>Concurso de proyectos histórico</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </section>
 <section>
     <div class="container">
@@ -29,9 +36,9 @@
                                 2013 - I</a>
                         </li>
                         <li role="presentation">
-                                <a href="#app-concurso-2012I" aria-controls="app-concurso-2012I" role="tab" data-toggle="tab">
-                                    2012 - I</a>
-                            </li>
+                            <a href="#app-concurso-2012I" aria-controls="app-concurso-2012I" role="tab" data-toggle="tab">
+                                2012 - I</a>
+                        </li>
                     </ul>
                     <div class="tab-content">
                         <div role="tabpanel" class="tab-pane active" id="app-concurso-2013I">

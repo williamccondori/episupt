@@ -2,14 +2,16 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='web_index'),
-    path('mision_vision', views.mision_vision, name='mision_vision'),
+    path('', views.index, name='index'),
+    path('mapa_sitio', views.mapa_sitio, name='mapa_sitio'),
+    path('contacto', views.contacto, name='contacto'),
 
 
     path('admision', views.admision, name='admision'),
 
     # Publicaciones.
     path('noticias', views.noticias, name='noticias'),
+    path('publicaciones', views.publicaciones, name='publicaciones'),
 
     # Investigacion.
     path('investigacion', views.investigacion, name='investigacion'),

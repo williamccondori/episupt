@@ -1,29 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700')
 
+$blanco: #f5f5f5
+$celeste: #17a2b8
+
+
 $color-yellow: #579fdf
 $color-blue: #23394D
 $color-white: #ffffff
 
-.app-spl
-    margin-left: 5px
-.app-spr
-    margin-riht: 5px
 
-.app-icon
-    width: 30px
-    height: 30px
-    line-height: 30px
-    text-align: center
-    background-color: #579fdf
-    color: $color-white
-    border-radius: 50%
-    display: inline-block
-    margin-right: 10px
-
-.panel-heading
-    font-weight: bold
+.carousel-caption
+    padding: 10px
+    background-color: rgba(51, 51, 51, 0.5)
+    border-radius: 5px
 
 body
+    font-family: 'Ubuntu', sans-serif  
 
     h3
         display: inline-block
@@ -35,10 +27,7 @@ body
         text-transform: uppercase
         color: $color-yellow
         border-bottom: 2px solid $color-yellow
-        
-
-    font-family: 'Ubuntu', sans-serif
-
+    
     #app-breadcrumb
         padding-top: 40px
         padding-bottom: 20px
@@ -65,5 +54,70 @@ body
                     color: $color-yellow !important
                     border-radius: 5px
 
-    #app-footer
-        background-color: #212121
+
+
+footer
+    background-color: #212121
+
+.epis-list-ho
+    ul
+        margin: 0
+        padding: 0
+        li
+            display: inline-block
+
+
+
+
+
+
+#epis-breadcrumb
+    margin: 0
+    padding: 0
+    background-color: #263238
+    padding-top: 40px
+    padding-bottom: 40px
+    h1
+        margin-bottom: 20px
+        color: $blanco
+        text-transform: uppercase
+        font-size: 24px
+        font-weight: bolder
+    ul
+        li
+            a
+                i
+                    margin-right: 5px
+                padding: 5px 10px 5px 10px
+                color: $blanco
+                border-radius: 4px
+            span
+                padding: 5px 10px 5px 10px
+                color: $celeste
+        li:first-child
+            a
+                background-color: $celeste
+
+
+
+
+
+    
+.app-spl
+    margin-left: 5px
+.app-spr
+    margin-riht: 5px
+
+.app-icon
+    width: 30px
+    height: 30px
+    line-height: 30px
+    text-align: center
+    background-color: #579fdf
+    color: $color-white
+    border-radius: 50%
+    display: inline-block
+    margin-right: 10px
+
+.panel-heading
+    font-weight: bold

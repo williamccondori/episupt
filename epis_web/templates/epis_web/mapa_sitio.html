@@ -1,0 +1,99 @@
+{% extends 'epis_web/base.html'%} 
+{% load static %} 
+{% block title %}Mapa del sitio{% endblock %} 
+{% block content %}
+<section id="epis-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Mapa del sitio</h1>
+                <div class="epis-list-ho">
+                    <ul>
+                        <li>
+                            <a href="{% url 'index' %}">
+                                <i class="fa fa-home"></i>Inicio</a>
+                        </li>
+                        <li>
+                            <span>Mapa del sitio</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                <h1>Mapa del sitio</h1>
+                <div class="epis-list-ve">
+                    <ul>
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Universidad</a>
+                        </li>
+                        <li>
+                            <a href="">Aula virtual</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                <h1>Publicaciones</h1>
+                <div class="epis-list-ve">
+                    <ul>
+                        <li>
+                            <a href="{% url 'publicaciones' %}">Publicaciones</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'noticias' %}">Noticias</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                <h1>Investigación</h1>
+                <div class="epis-list-ve">
+                    <ul>
+                        <li>
+                            <a href="{% url 'investigacion' %}">Investigación</a>
+                        </li>
+                        <li>
+                            <a href="http://repositorio.upt.edu.pe/handle/UPT/22" target="_blank">Repositorio digital</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'plan_estudio' %}">Plan de estudios</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'malla_curricular' %}">Malla curricular</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'concurso_proyecto' %}">Concurso de proyectos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                <h1>Mapa del sitio</h1>
+                <div class="epis-list-ve">
+                    <ul>
+                        <li>
+                            <a href="">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="">Universidad</a>
+                        </li>
+                        <li>
+                            <a href="">Aula virtual</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

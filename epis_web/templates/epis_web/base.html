@@ -1,46 +1,129 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %} - Escuela profesional de ingeniería de sistemas</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <title>{% block title %}{% endblock %} - Escuela Profesional de Ingeniería de Sistemas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'epis_web/css/styles.css' %}">
 </head>
+
 <body>
     <header>
+        <section id="epis-header-enlace">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="epis-list-ho">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'index' %}">Inicio</a>
+                                </li>
+                                <li>
+                                    <a href="">Universidad</a>
+                                </li>
+                                <li>
+                                    <a href="">Aula virtual</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="epis-list-ho text-right">
+                            <ul>
+                                <li>
+                                    <a href="">[Icono]</a>
+                                </li>
+                                <li>
+                                    <a href="">[Icono]</a>
+                                </li>
+                                <li>
+                                    <a href="">[Icono]</a>
+                                </li>
+                                <li>
+                                    <a href="">[Icono]</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="epis-header-titulo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="text-center">
+                            <img src="" alt="logo">
+                            <h1>Escuela Profesional de Ingeniería de Sistemas</h1>
+                            <h2>Universidad Privada de Tacna</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="epis-header-menu">
+            <nav>
 
+            </nav>
+        </section>
     </header>
     <section>
         {% block content %}{% endblock %}
     </section>
-    <br>
-    <br>
-    <footer id="app-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h1>Nosotros</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et aliquid nisi optio quis rem totam porro cupiditate perspiciatis, amet dolorem soluta ullam rerum magni minima, laboriosam officia voluptatibus voluptatum adipisci.</p>
+    <footer>
+        <section id="epis-footer-informacion">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <h1></h1>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <h1></h1>
+                    </div>
+                    <div class="col-12 col-sm-4 col-md-4 col-lg-4">
+                        <h1></h1>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h1>Admisión</h1>
+            </div>
+        </section>
+        <section id="epis-footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        Universidad Privada de Tacna 2017
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="epis-list-ho text-right">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'mapa_sitio' %}">Mapa del sitio</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'index' %}">Admisión</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'contacto' %}">Contacto</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h1>Enláces rápidos</h1>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    <h1>Contáctanos</h1>
-                </div>
-            </div> 
-        </div> 
+            </div>
+        </section>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

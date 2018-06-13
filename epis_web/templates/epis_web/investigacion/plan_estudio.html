@@ -1,22 +1,29 @@
-{% extends 'epis_web/base.html'%} {% load static %} {% block title %} Plan de estudios {% endblock %} {% block content %}
-<section>
-    <section id="app-breadcrumb">
-        <div class="container">
-            <h1>Plan de estudios</h1>
-            <ol class="breadcrumb">
-                <li>
-                    <a href="{% url 'index' %}">
-                        <i class="fa fa-home app-spr"></i>Inicio</a>
-                </li>
-                <li>
-                    <a href="{% url 'investigacion' %}">Investigación</a>
-                </li>
-                <li class="active">
-                    <span>Plan de estudios</span>
-                </li>
-            </ol>
+{% extends 'epis_web/base.html'%} 
+{% load static %} 
+{% block title %} Plan de estudios {% endblock %} 
+{% block content %}
+<section id="epis-breadcrumb">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>Plan de estudios</h1>
+                <div class="epis-list-ho">
+                    <ul>
+                        <li>
+                            <a href="{% url 'index' %}">
+                                <i class="fa fa-home"></i>Inicio</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'investigacion' %}">Investigación</a>
+                        </li>
+                        <li>
+                            <span>Plan de estudios</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
 </section>
 <section>
     <div class="container">
@@ -47,8 +54,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for curso in cursos_obligatorios %} 
-                                {% if curso.ciclo.id == ciclo.id %}
+                                {% for curso in cursos_obligatorios %} {% if curso.ciclo.id == ciclo.id %}
                                 <tr>
                                     <td>
                                         <span class="label label-success">{{ curso.codigo }}</span>
@@ -60,12 +66,11 @@
                                     <td>{{ curso.credito }}</td>
                                     <td>
                                         {% for requisito in curso.requisitos %}
-                                            <span class="label label-info">{{ requisito.nombre }}</span><br>
-                                        {% endfor %}
+                                        <span class="label label-info">{{ requisito.nombre }}</span>
+                                        <br> {% endfor %}
                                     </td>
                                 </tr>
-                                {% endif %} 
-                                {% endfor %}
+                                {% endif %} {% endfor %}
                             </tbody>
                         </table>
                     </div>
@@ -93,24 +98,24 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                    {% for curso in cursos_electivos %} 
-                                    <tr>
-                                        <td>
-                                            <span class="label label-success">{{ curso.codigo }}</span>
-                                        </td>
-                                        <td>{{ curso.nombre }}</td>
-                                        <td>{{ curso.hora_teorica }}</td>
-                                        <td>{{ curso.hora_practica }}</td>
-                                        <td>{{ curso.hora_total }}</td>
-                                        <td>{{ curso.credito }}</td>
-                                        <td>
-                                            {% for requisito in curso.requisitos %}
-                                                <span class="label label-info">{{ requisito.nombre }}</span><br>
-                                            {% endfor %}
-                                        </td>
-                                    </tr>
-                                    {% endfor %}
-                                </tbody>
+                                {% for curso in cursos_electivos %}
+                                <tr>
+                                    <td>
+                                        <span class="label label-success">{{ curso.codigo }}</span>
+                                    </td>
+                                    <td>{{ curso.nombre }}</td>
+                                    <td>{{ curso.hora_teorica }}</td>
+                                    <td>{{ curso.hora_practica }}</td>
+                                    <td>{{ curso.hora_total }}</td>
+                                    <td>{{ curso.credito }}</td>
+                                    <td>
+                                        {% for requisito in curso.requisitos %}
+                                        <span class="label label-info">{{ requisito.nombre }}</span>
+                                        <br> {% endfor %}
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
                         </table>
                     </div>
                 </div>
@@ -152,7 +157,7 @@
                                         <b>Total</b>
                                     </td>
                                     <td>
-                                        <b>{{  plan_estudio.credito_total }}</b>
+                                        <b>{{ plan_estudio.credito_total }}</b>
                                     </td>
                                 </tr>
                             </tbody>

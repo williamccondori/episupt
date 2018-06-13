@@ -84,7 +84,7 @@ DATABASES = {
         'HOST': 'ec2-54-204-2-26.compute-1.amazonaws.com',
         'PORT': '5432',
     },
-    'local': {
+    'heroku': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
